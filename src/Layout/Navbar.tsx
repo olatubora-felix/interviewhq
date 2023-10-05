@@ -18,9 +18,9 @@ const NAV = {
 const SideNav = () => {
   return (
     <div className="bg-[#170134] flex  border-r-2 border-[#F7F7F8] text-[#fff] font-[Inter] ">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center py-2">
         <h1>Interviewhq</h1>
-        <div className="flex  gap-2 pl-4">
+        <div className="flex  gap-4 ">
           {NAV.BASE.map((sidenav) => (
             <NavLink
               className="text-[#334155] text-[14px]  font-[400] active:text-blue-800 h-[40px] active:font-[400]  flex items-center gap-3"
@@ -32,7 +32,12 @@ const SideNav = () => {
             </NavLink>
           ))}
         </div>
-        <div>Login</div>
+        <div className="flex gap-1 items-center">
+          <button className="bg-transparent py-2 px-4 border border-[1px #A5A0A0] rounded-sm">
+            Login
+          </button>
+          <button className="bg-purple-400 px-4 py-2">Sign up</button>
+        </div>
       </div>
     </div>
   );
